@@ -19,32 +19,6 @@
 
         <p>Searching for {{searchTerm1}}</p>
 
-        <div class="row">
-            {% if not movies%}
-                <p>No Movies found in the database</p>
-            {% else %}
-            {% for movie in movies %}
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{movie.image.url}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{movie.title}}</h5>
-                        <p class="card-text">{{movie.description}}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Duracion: {{movie.duration}} minutos</li>
-                        <li class="list-group-item">Año salida: {{movie.year}}</li>
-                    </ul>
-                    <div class="card-body">
-                        {% if movie.url %}
-                        <a href="{{movie.image.url}}" class="card-link">link</a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-            {% endif %}
-
         </div>
     </div>
 </body>
